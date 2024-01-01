@@ -2,7 +2,8 @@ const z = require('zod');
 const createTodo = z.object(
     {
         title: z.string(),
-        description: z.string()
+        description: z.string(),
+        completed: z.boolean()
     }
 );
 
