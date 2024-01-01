@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const {createTodo, updateTodo} = require('./types.js');
 const {todo} = require('./db.js');
 const app = express();
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());
 
 app.post('/todo', async (req, res)=>{
